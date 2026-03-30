@@ -59,13 +59,8 @@ canvas {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
   text-shadow:0 0 10px rgba(123,92,255,0.6);
   text-align:center;
 }
-.stat-label { text-transform: uppercase; font-size:0.8rem; color:#ccc; letter-spacing:1px; text-align:center; margin-top:5px; }
-
-@keyframes gradientShift {
-  0% { background-position:0% 50%; }
-  50% { background-position:100% 50%; }
-  100% { background-position:0% 50%; }
-}
+.stat-label { text-transform: uppercase; font-size:0.9rem; color:#ccc; letter-spacing:0.5px; text-align:center; margin-top:5px; }
+.stat-desc { font-size:0.75rem; color:#aaa; margin-top:4px; text-align:center; line-height:1.2rem; }
 
 /* Сообщения */
 .msg { max-width:90%; padding:10px 14px; border-radius:16px; margin:6px 0; }
@@ -92,6 +87,12 @@ canvas {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
  display:flex; align-items:center; justify-content:center;
  box-shadow:0 0 10px rgba(123,92,255,.9); }
 .line { height:20px; width:2px; background:linear-gradient(#7b5cff,transparent); margin-left:14px; }
+
+@keyframes gradientShift {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
 </style>
 </head>
 <body>
@@ -120,14 +121,17 @@ canvas {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
     <div class="p-3 rounded-xl bg-gradient-to-r from-purple-700 to-purple-500 shadow-lg hover:shadow-purple-400 transition transform hover:scale-105">
       <div class="stat-number">900+</div>
       <div class="stat-label">успешных сделок</div>
+      <div class="stat-desc">Тысячи довольных клиентов доверяют Lane за прозрачность и безопасность</div>
     </div>
     <div class="p-3 rounded-xl bg-gradient-to-r from-purple-700 to-purple-500 shadow-lg hover:shadow-purple-400 transition transform hover:scale-105">
       <div class="stat-number">98%</div>
       <div class="stat-label">довольных клиентов</div>
+      <div class="stat-desc">Большинство клиентов возвращаются и рекомендуют Lane своим друзьям</div>
     </div>
     <div class="p-3 rounded-xl bg-gradient-to-r from-purple-700 to-purple-500 shadow-lg hover:shadow-purple-400 transition transform hover:scale-105">
       <div class="stat-number">6%</div>
       <div class="stat-label">комиссия гаранта</div>
+      <div class="stat-desc">Прозрачные условия — никаких скрытых процентов, безопасная оплата</div>
     </div>
   </div>
 </div>
