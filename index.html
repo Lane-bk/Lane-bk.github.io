@@ -23,10 +23,7 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   width: 100%;
 }
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 35px rgba(123,92,255,.5);
-}
+.card:hover { transform: translateY(-3px); box-shadow:0 0 35px rgba(123,92,255,.5); }
 .glow { box-shadow: 0 0 20px rgba(140,100,255,.35); }
 
 .step { display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; }
@@ -44,11 +41,7 @@ body {
   text-align:center;
   transition: .3s transform, .3s box-shadow, .3s background;
 }
-.link-btn:hover {
-  background:#7b5cff;
-  box-shadow:0 0 12px #7b5cff;
-  transform: scale(1.05);
-}
+.link-btn:hover { background:#7b5cff; box-shadow:0 0 12px #7b5cff; transform: scale(1.05); }
 
 .telegram-btn {
   display:flex;
@@ -63,10 +56,7 @@ body {
   font-weight:600;
   transition:.3s transform, .3s box-shadow;
 }
-.telegram-btn:hover {
-  transform: scale(1.05);
-  box-shadow:0 0 15px #b480ff;
-}
+.telegram-btn:hover { transform: scale(1.05); box-shadow:0 0 15px #b480ff; }
 
 .stat-number {
   font-family: 'Roboto Mono', monospace;
@@ -98,7 +88,6 @@ body {
 
 /* ANIMATION FOR CHAT MESSAGES */
 @keyframes slideIn { to { opacity:1; transform: translateY(0); } }
-
 </style>
 </head>
 <body class="text-gray-200">
@@ -152,7 +141,20 @@ body {
   </div>
 </div>
 
-<!-- EXAMPLE DEAL ANIMATED -->
+<!-- HOW DEAL WORKS -->
+<div class="card glow fade-in">
+  <h2 class="text-lg font-semibold mb-2 text-center" style="background: linear-gradient(90deg,#7b5cff,#b480ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Как проходит сделка</h2>
+  <div class="flex flex-col space-y-2">
+    <div class="msg msg-in" style="opacity:1; transform: translateY(0);">Привет, интересует товар</div>
+    <div class="msg msg-out" style="opacity:1; transform: translateY(0);">Здравствуйте 👋 Работаем через гаранта</div>
+    <div class="msg msg-in" style="opacity:1; transform: translateY(0);">Как проходит сделка?</div>
+    <div class="msg msg-out" style="opacity:1; transform: translateY(0);">Отправляете оплату гаранту → проверка → выдача товара</div>
+    <div class="msg msg-in" style="opacity:1; transform: translateY(0);">Сколько ждать?</div>
+    <div class="msg msg-out" style="opacity:1; transform: translateY(0);">Подтверждение TON 1-3 минуты ⏱</div>
+  </div>
+</div>
+
+<!-- EXAMPLE DEAL -->
 <div class="card glow fade-in" style="background: linear-gradient(135deg,#1b1535,#2a2250); box-shadow:0 0 25px #7b5cff;">
   <h2 class="text-lg font-semibold mb-2 text-center" style="background: linear-gradient(90deg,#7b5cff,#b480ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Пример сделки</h2>
   <div class="flex flex-col space-y-2">
