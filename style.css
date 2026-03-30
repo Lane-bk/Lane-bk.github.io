@@ -1,43 +1,26 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI}
 
 body{
-    background: radial-gradient(circle at top,
-    #0b0518 0%,
-    #070311 40%,
-    #05020d 100%);
+    background: radial-gradient(circle at top,#0b0518,#05020d);
     color:#e6e9ff;
-    min-height:100vh;
 }
 
-/* языки */
-.lang{
-    position:absolute;
-    right:20px;
-    top:20px;
-}
+.lang{position:absolute;right:20px;top:20px}
 .lang button{
-    background:#11142a;
+    background:#151935;
     border:none;
     color:white;
     padding:6px 14px;
     border-radius:20px;
-    margin-left:6px;
 }
-.lang .active{
-    background:#7b5cff;
-}
+.lang .active{background:#7b5cff}
 
-/* контейнер */
-.container{
-    width:420px;
-    margin:auto;
-    padding-top:90px;
-}
+.container{width:420px;margin:auto;padding-top:90px}
 
-/* glass карточки */
+/* cards */
 .card{
     backdrop-filter: blur(20px);
-    background: rgba(20,16,45,0.6);
+    background: rgba(20,16,45,.6);
     border-radius:22px;
     padding:26px;
     margin-bottom:22px;
@@ -46,19 +29,13 @@ body{
     opacity:0;
     transition:.7s;
 }
-.card.show{
-    transform:translateY(0);
-    opacity:1;
-}
+.card.show{transform:translateY(0);opacity:1}
 
-/* аватар */
+/* avatar */
 .avatar{
-    width:115px;
-    height:115px;
-    border-radius:50%;
-    margin:auto;
-    background:url("avatar.png") center/cover;
-    box-shadow:0 0 25px #7b5cff, inset 0 0 35px #7b5cff;
+    width:115px;height:115px;border-radius:50%;
+    margin:auto;background:url("avatar.png") center/cover;
+    box-shadow:0 0 25px #7b5cff,inset 0 0 35px #7b5cff;
     animation:pulse 3s infinite;
 }
 @keyframes pulse{
@@ -67,63 +44,39 @@ body{
     100%{box-shadow:0 0 10px #7b5cff}
 }
 
-h1{text-align:center;margin:15px 0}
-.typing{text-align:center;color:#a78bff;height:20px}
+h1{text-align:center;font-size:28px;text-shadow:0 0 15px rgba(170,140,255,.4)}
 
-/* статистика */
+.subtitle{
+    text-align:center;font-size:14px;letter-spacing:1.2px;
+    color:#b9a7ff;
+    text-shadow:0 0 8px rgba(167,139,255,.9);
+}
+
+#typing::after{content:"|";animation:blink 1s infinite}
+@keyframes blink{50%{opacity:0}}
+
 .stats{display:flex;gap:12px;margin-top:18px}
 .stat{
-    flex:1;
-    background:#121533;
-    padding:16px;
-    border-radius:14px;
-    text-align:center;
-    font-size:22px;
+    flex:1;background:#121533;padding:16px;border-radius:14px;text-align:center;font-size:22px
 }
 .stat span{display:block;font-size:12px;color:#7c83b5}
 
-/* контакты */
 .contact{
-    display:block;
-    background:#121533;
-    padding:14px;
-    border-radius:14px;
-    margin-top:10px;
-    transition:.3s;
+    display:block;background:#121533;padding:14px;border-radius:14px;margin-top:10px;
+    transition:.3s;text-decoration:none;color:white
 }
-.contact:hover{
-    background:#7b5cff;
-    box-shadow:0 0 15px #7b5cff;
-}
+.contact:hover{background:#7b5cff;box-shadow:0 0 15px #7b5cff}
 
-/* wallet */
-.wallet{
-    display:flex;
-    justify-content:space-between;
-    background:#121533;
-    padding:12px;
-    border-radius:14px;
-    margin-top:12px;
-}
-button{
-    background:#7b5cff;
-    border:none;
-    padding:8px 15px;
-    border-radius:10px;
-    color:white;
-    cursor:pointer;
-}
+.wallet{display:flex;justify-content:space-between;background:#121533;padding:12px;border-radius:14px}
+button{background:#7b5cff;border:none;padding:8px 15px;border-radius:10px;color:white;cursor:pointer}
 
-/* шаги */
-.step{
-    background:#121533;
-    padding:12px;
-    border-radius:12px;
-    margin-top:10px;
+/* deal */
+.deal{margin-top:20px}
+.deal-step{display:flex;gap:15px;margin-bottom:18px}
+.circle{
+    min-width:34px;height:34px;border-radius:50%;background:#7b5cff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 15px rgba(123,92,255,.8)
 }
-.step b{
-    background:#7b5cff;
-    padding:4px 8px;
-    border-radius:50%;
-    margin-right:8px;
-}
+.deal-text p{font-size:13px;color:#8e93c9}
+.line{height:25px;width:2px;background:linear-gradient(#7b5cff,transparent);margin-left:16px}
