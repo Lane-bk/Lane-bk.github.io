@@ -12,16 +12,10 @@ body {
   margin:0;
   padding:0;
   background:#0b0518;
-  overflow-x:hidden;
   color:#e0e0e0;
+  overflow-x:hidden;
 }
-canvas {
-  position: fixed;
-  top:0; left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
-}
+canvas { position: fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
 
 /* Карточки */
 .card {
@@ -37,13 +31,13 @@ canvas {
 .glow { box-shadow:0 0 20px rgba(140,100,255,.35); }
 
 /* Аватарка с красивой рамкой */
-.avatar-container { position: relative; display: inline-block; }
+.avatar-container { position: relative; display: inline-block; margin-top:10px;}
 .avatar {
   width: 100px; height: 100px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid;
-  border-image: linear-gradient(45deg,#7b5cff,#b480ff) 1;
+  border-image: linear-gradient(135deg,#6d4aff,#b480ff) 1;
   box-shadow:0 0 20px rgba(123,92,255,0.5);
 }
 
@@ -71,17 +65,17 @@ canvas {
   font-family:'Roboto Mono', monospace;
   font-size:2rem;
   font-weight:700;
-  background: linear-gradient(90deg,#7b5cff,#b480ff,#7b5cff);
-  background-size:200% 100%;
+  background: linear-gradient(270deg,#7b5cff,#b480ff,#7b5cff);
+  background-size:400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientShift 3s ease infinite;
+  animation: gradientShift 5s ease infinite;
   text-shadow:0 0 10px rgba(123,92,255,.6);
 }
 @keyframes gradientShift {
-  0% { background-position:0% 0%; }
-  50% { background-position:100% 0%; }
-  100% { background-position:0% 0%; }
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
 }
 
 /* Сообщения */
@@ -134,11 +128,11 @@ canvas {
 
 <!-- PROFILE -->
 <div class="card glow text-center fade-in">
-  <div class="avatar-container mx-auto mt-2">
+  <div class="avatar-container mx-auto">
     <img src="https://i.ibb.co/WWhLLLQx/IMG-20260330-181224-969.jpg" alt="Lane Avatar" class="avatar">
   </div>
   <h1 class="text-2xl font-bold mt-3 mb-1 flex justify-center items-center gap-2">
-    Lane 
+    Lane
     <span class="username-check">✓</span>
   </h1>
   <p class="text-purple-300 text-sm">Гарант сделок • 6% комиссия • 900+ успешных сделок</p>
