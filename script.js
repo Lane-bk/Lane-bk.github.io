@@ -1,5 +1,4 @@
-// печать текста
-const text = "Гарант сделок • Низкая комиссия • Безопасные сделки";
+const text="Гарант сделок • 6% комиссия • Безопасные сделки • 900+ сделок";
 let i=0;
 function type(){
  if(i<text.length){
@@ -10,20 +9,16 @@ function type(){
 }
 type();
 
-// copy TON
 function copyWallet(){
  navigator.clipboard.writeText(
-   document.getElementById("wallet").innerText
+  document.getElementById("wallet").innerText
  );
- alert("Скопировано!");
+ alert("Адрес скопирован!");
 }
 
-// плавное появление карточек
 const observer=new IntersectionObserver(entries=>{
  entries.forEach(entry=>{
-  if(entry.isIntersecting){
-   entry.target.classList.add("show");
-  }
+  if(entry.isIntersecting) entry.target.classList.add("show");
  });
 });
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
