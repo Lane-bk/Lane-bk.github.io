@@ -88,6 +88,13 @@ canvas {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
  box-shadow:0 0 10px rgba(123,92,255,.9); color:white; font-weight:bold; }
 .line { height:20px; width:2px; background:linear-gradient(#7b5cff,transparent); margin-left:14px; }
 
+/* Преимущества */
+.advantage { display:flex; gap:12px; align-items:start; margin-bottom:12px; }
+.adv-icon { min-width:35px; min-height:35px; border-radius:50%; background:#7b5cff; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:1rem; flex-shrink:0; box-shadow:0 0 10px #7b5cff; }
+.adv-text { flex:1; }
+.adv-title { font-weight:600; margin-bottom:3px; color:#fff; }
+.adv-desc { font-size:0.8rem; color:#ccc; line-height:1.2rem; }
+
 @keyframes gradientShift {
   0% { background-position:0% 50%; }
   50% { background-position:100% 50%; }
@@ -149,7 +156,7 @@ canvas {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
   </div>
 </div>
 
-<!-- Этапы сделки (новый блок вместо 1 сделки) -->
+<!-- Этапы сделки -->
 <div class="card glow">
   <h2 class="text-lg font-semibold mb-2 text-center" style="background: linear-gradient(90deg,#7b5cff,#b480ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Этапы сделки</h2>
   <div class="flex flex-col">
@@ -175,16 +182,36 @@ canvas {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
   </div>
 </div>
 
-<!-- Пример сделки -->
+<!-- Преимущества работы с Lane -->
 <div class="card glow">
-  <h2 class="text-lg font-semibold mb-2 text-center" style="background: linear-gradient(90deg,#7b5cff,#b480ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Пример сделки</h2>
-  <div class="flex flex-col space-y-2">
-    <div class="msg msg-in">Добрый день, хочу заказать товар Y.</div>
-    <div class="msg msg-out">Привет 👋 Оплата идёт через гаранта Lane. Переводите средства гаранту.</div>
-    <div class="msg msg-in">Оплату сделал, что дальше?</div>
-    <div class="msg msg-out">После подтверждения оплаты, продавец передаст товар гаранту, затем вам.</div>
-    <div class="msg msg-in">Все получил, деньги продавцу?</div>
-    <div class="msg msg-out">Да ✅ Проверка завершена, гарантия сработала — деньги переведены продавцу.</div>
+  <h2 class="text-lg font-semibold mb-2 text-center" style="background: linear-gradient(90deg,#7b5cff,#b480ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Преимущества</h2>
+  <div class="advantage">
+    <div class="adv-icon">✓</div>
+    <div class="adv-text">
+      <div class="adv-title">Безопасно</div>
+      <div class="adv-desc">Все операции проходят через гаранта, средства защищены до получения товара.</div>
+    </div>
+  </div>
+  <div class="advantage">
+    <div class="adv-icon">💰</div>
+    <div class="adv-text">
+      <div class="adv-title">Прозрачная комиссия</div>
+      <div class="adv-desc">Всегда 6%, никаких скрытых платежей.</div>
+    </div>
+  </div>
+  <div class="advantage">
+    <div class="adv-icon">⚡</div>
+    <div class="adv-text">
+      <div class="adv-title">Быстро</div>
+      <div class="adv-desc">TON транзакции подтверждаются за 1-3 минуты, сделки проходят без задержек.</div>
+    </div>
+  </div>
+  <div class="advantage">
+    <div class="adv-icon">🌟</div>
+    <div class="adv-text">
+      <div class="adv-title">Доверие</div>
+      <div class="adv-desc">900+ успешных сделок и сотни довольных клиентов.</div>
+    </div>
   </div>
 </div>
 
