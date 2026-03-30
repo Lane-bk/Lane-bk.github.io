@@ -79,6 +79,11 @@ body {
   transform: scale(1.1);
 }
 
+.msg { max-width:75%; padding:12px 16px; border-radius:18px; margin:6px 0; transition: transform 0.3s; }
+.msg:hover { transform: scale(1.02); }
+.msg-in { background:#1b1535; border:1px solid #2a2250; }
+.msg-out { background:#6d4aff; color:white; }
+
 .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
 
@@ -166,6 +171,19 @@ body {
   <div class="step"><div class="circle">3</div><div>Гарант проверяет и передает товар покупателю</div></div>
   <div class="line"></div>
   <div class="step"><div class="circle">4</div><div>Гарант переводит деньги продавцу</div></div>
+</div>
+
+<!-- EXAMPLE DEAL -->
+<div class="card glow fade-in">
+  <h2 class="text-xl font-semibold mb-4">Пример сделки</h2>
+  <div class="flex flex-col">
+    <div class="msg msg-in">Привет! Хочу купить товар X.</div>
+    <div class="msg msg-out self-end">Здравствуйте 👋 Работаем через гаранта Lane. Сначала переводите оплату гаранту.</div>
+    <div class="msg msg-in">Хорошо, сколько ждать проверки?</div>
+    <div class="msg msg-out self-end">Подтверждение TON занимает 1-3 минуты ⏱. После этого продавец передаст товар гаранту.</div>
+    <div class="msg msg-in">Товар получил, а деньги продавцу?</div>
+    <div class="msg msg-out self-end">Как только проверим товар — деньги безопасно переводятся продавцу. Всё прозрачно и надёжно ✅</div>
+  </div>
 </div>
 
 <script>
