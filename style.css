@@ -1,0 +1,129 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+
+body{
+    background: radial-gradient(circle at top,
+    #0b0518 0%,
+    #070311 40%,
+    #05020d 100%);
+    color:#e6e9ff;
+    min-height:100vh;
+}
+
+/* языки */
+.lang{
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+.lang button{
+    background:#11142a;
+    border:none;
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+    margin-left:6px;
+}
+.lang .active{
+    background:#7b5cff;
+}
+
+/* контейнер */
+.container{
+    width:420px;
+    margin:auto;
+    padding-top:90px;
+}
+
+/* glass карточки */
+.card{
+    backdrop-filter: blur(20px);
+    background: rgba(20,16,45,0.6);
+    border-radius:22px;
+    padding:26px;
+    margin-bottom:22px;
+    box-shadow:0 0 30px rgba(120,90,255,.15);
+    transform:translateY(40px);
+    opacity:0;
+    transition:.7s;
+}
+.card.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+/* аватар */
+.avatar{
+    width:115px;
+    height:115px;
+    border-radius:50%;
+    margin:auto;
+    background:url("avatar.png") center/cover;
+    box-shadow:0 0 25px #7b5cff, inset 0 0 35px #7b5cff;
+    animation:pulse 3s infinite;
+}
+@keyframes pulse{
+    0%{box-shadow:0 0 10px #7b5cff}
+    50%{box-shadow:0 0 35px #a78bff}
+    100%{box-shadow:0 0 10px #7b5cff}
+}
+
+h1{text-align:center;margin:15px 0}
+.typing{text-align:center;color:#a78bff;height:20px}
+
+/* статистика */
+.stats{display:flex;gap:12px;margin-top:18px}
+.stat{
+    flex:1;
+    background:#121533;
+    padding:16px;
+    border-radius:14px;
+    text-align:center;
+    font-size:22px;
+}
+.stat span{display:block;font-size:12px;color:#7c83b5}
+
+/* контакты */
+.contact{
+    display:block;
+    background:#121533;
+    padding:14px;
+    border-radius:14px;
+    margin-top:10px;
+    transition:.3s;
+}
+.contact:hover{
+    background:#7b5cff;
+    box-shadow:0 0 15px #7b5cff;
+}
+
+/* wallet */
+.wallet{
+    display:flex;
+    justify-content:space-between;
+    background:#121533;
+    padding:12px;
+    border-radius:14px;
+    margin-top:12px;
+}
+button{
+    background:#7b5cff;
+    border:none;
+    padding:8px 15px;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+}
+
+/* шаги */
+.step{
+    background:#121533;
+    padding:12px;
+    border-radius:12px;
+    margin-top:10px;
+}
+.step b{
+    background:#7b5cff;
+    padding:4px 8px;
+    border-radius:50%;
+    margin-right:8px;
+}
